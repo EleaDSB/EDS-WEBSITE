@@ -5,7 +5,6 @@ export default function Hero() {
   return (
     <section
       className="min-h-screen flex items-center px-6 relative overflow-hidden"
-      style={{ backgroundColor: "#03045e" }}
     >
       {/* Image de fond */}
       <Image
@@ -14,13 +13,12 @@ export default function Hero() {
         fill
         priority
         className="object-cover"
-        style={{ opacity: 0.25 }}
       />
 
-      {/* Overlay dégradé pour lisibilité */}
+      {/* Overlay sombre pour lisibilité du texte */}
       <div
         className="absolute inset-0 pointer-events-none"
-        style={{ background: "linear-gradient(to right, rgba(3,4,94,0.85) 40%, rgba(3,4,94,0.4) 100%)" }}
+        style={{ backgroundColor: "rgba(0,0,0,0.45)" }}
       />
 
       <div className="max-w-6xl mx-auto w-full pt-28 pb-20 relative z-10">
