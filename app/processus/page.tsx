@@ -13,6 +13,7 @@ export default function ProcessusPage() {
       <PageBanner
         title="Comment ça se passe ?"
         subtitle="Un processus transparent pour un résultat qui dépasse vos attentes."
+        image="/heroimage.jpg"
       />
       <Process />
     </>
