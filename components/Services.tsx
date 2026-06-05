@@ -11,7 +11,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 px-6 relative overflow-hidden" style={{ marginTop: "-3rem", paddingTop: "6rem" }}>
+    <section id="services" className="py-20 px-6 relative overflow-hidden">
       <Image src="/service.jpg" alt="" fill className="object-cover" />
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
       <div className="max-w-6xl mx-auto relative z-10">
