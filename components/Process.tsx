@@ -12,7 +12,7 @@ export default function Process() {
   return (
     <section id="processus" className="py-20 px-6 relative overflow-hidden">
       {/* Image de fond */}
-      <Image src="/heroimage.jpg" alt="" fill className="object-cover" />
+      <Image src="/postit.jpg" alt="" fill className="object-cover" />
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.65)" }} />
 
       <div className="max-w-3xl mx-auto relative z-10">
