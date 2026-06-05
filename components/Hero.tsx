@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex items-center px-6 relative overflow-hidden">
       {/* Image de fond */}
-      <Image src="/workplace.jpg" alt="" fill priority className="object-cover" />
+      <Image src="/heroimage.jpg" alt="" fill priority className="object-cover" />
 
       {/* Overlay sombre pour lisibilité */}
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.45)" }} />
