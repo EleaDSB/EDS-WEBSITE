@@ -21,16 +21,6 @@ export default function Hero() {
 
           {/* Left — texte */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-2xl">👋</span>
-              <span
-                className="text-sm font-semibold px-3 py-1 rounded-full"
-                style={{ backgroundColor: "rgba(0,119,182,0.12)", color: "#0077b6" }}
-              >
-                Bonjour, je suis Eléa
-              </span>
-            </div>
-
             <h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
               style={{ color: "#03045e" }}
