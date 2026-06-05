@@ -1,16 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Processus", href: "#processus" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Processus", href: "/processus" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -18,38 +21,47 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm border-b border-[#caf0f8] shadow-sm" : "bg-transparent"
+        scrolled || pathname !== "/"
+          ? "bg-white/95 backdrop-blur-sm border-b shadow-sm"
+          : "bg-transparent"
       }`}
+      style={{ borderColor: "#caf0f8" }}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
+        <Link href="/" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
           &lt;<span style={{ color: "#0077b6" }}>EDS</span>/&gt;
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-600 hover:text-[#0077b6] transition-colors"
+              className="text-sm transition-colors font-medium"
+              style={{ color: pathname === l.href ? "#0077b6" : "#555" }}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="text-sm px-4 py-2 rounded-full text-white font-medium transition-opacity hover:opacity-80"
             style={{ backgroundColor: "#0077b6" }}
           >
             Démarrer un projet
-          </a>
+          </Link>
         </nav>
 
         <button
-          className="md:hidden p-2 text-gray-600"
+          className="md:hidden p-2"
+          style={{ color: "#03045e" }}
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -64,25 +76,24 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-[#caf0f8] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t px-6 py-4 flex flex-col gap-4" style={{ borderColor: "#caf0f8" }}>
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-700 hover:text-[#0077b6] transition-colors"
-              onClick={() => setOpen(false)}
+              className="text-sm font-medium"
+              style={{ color: pathname === l.href ? "#0077b6" : "#555" }}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="text-sm px-4 py-2 rounded-full text-white font-medium text-center"
             style={{ backgroundColor: "#0077b6" }}
-            onClick={() => setOpen(false)}
           >
             Démarrer un projet
-          </a>
+          </Link>
         </div>
       )}
     </header>

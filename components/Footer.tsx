@@ -1,19 +1,21 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="px-6 py-12 bg-white" style={{ borderTop: "1px solid #caf0f8" }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="#" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
+        <Link href="/" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
           &lt;<span style={{ color: "#0077b6" }}>EDS</span>/&gt;
-        </a>
+        </Link>
 
         <nav className="flex gap-6 text-sm text-gray-500">
-          <a href="#services" className="hover:text-[#0077b6] transition-colors">Services</a>
-          <a href="#processus" className="hover:text-[#0077b6] transition-colors">Processus</a>
-          <a href="#contact" className="hover:text-[#0077b6] transition-colors">Contact</a>
+          <Link href="/services" className="hover:text-[#0077b6] transition-colors">Services</Link>
+          <Link href="/processus" className="hover:text-[#0077b6] transition-colors">Processus</Link>
+          <Link href="/contact" className="hover:text-[#0077b6] transition-colors">Contact</Link>
         </nav>
 
         <div className="flex items-center gap-4">
