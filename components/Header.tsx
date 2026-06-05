@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 const links = [
   { label: "Services", href: "/services" },
   { label: "Processus", href: "/processus" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -63,7 +62,7 @@ export default function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="relative text-sm font-medium px-4 py-2 rounded-full transition-all duration-200"
+                className="relative text-base font-medium px-4 py-2 rounded-full transition-all duration-200"
                 style={{
                   color: pathname === l.href
                     ? "#f48c06"
@@ -88,15 +87,14 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
+              className="hidden md:inline-flex items-center gap-1.5 text-base font-semibold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
               style={{
                 background: "linear-gradient(135deg, #dc2f02, #f48c06)",
-                boxShadow: "0 4px 12px rgba(0,119,182,0.25)",
+                boxShadow: "0 4px 12px rgba(220,47,2,0.25)",
               }}
             >
               <span>✦</span> Démarrer un projet
             </Link>
-
             <button
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-full transition-colors"
               style={{
@@ -136,13 +134,6 @@ export default function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
-              className="mt-1 text-sm font-semibold px-4 py-3 rounded-2xl text-white text-center"
-              style={{ background: "linear-gradient(135deg, #dc2f02, #f48c06)" }}
-            >
-              ✦ Démarrer un projet
-            </Link>
           </div>
         )}
       </header>
