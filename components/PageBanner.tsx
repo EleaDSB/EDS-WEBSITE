@@ -12,7 +12,8 @@ export default function PageBanner({ title, subtitle, image }: Props) {
       className="relative pt-32 pb-24 px-6 overflow-hidden"
       style={{
         ...(image ? {} : { background: "linear-gradient(135deg, #dc2f02 0%, #f48c06 100%)" }),
-        borderRadius: "0 0 3rem 3rem",
+        borderBottomLeftRadius: "50% 4rem",
+        borderBottomRightRadius: "50% 4rem",
         zIndex: 10,
         position: "relative",
       }}
