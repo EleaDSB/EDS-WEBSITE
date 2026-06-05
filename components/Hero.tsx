@@ -1,150 +1,70 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      className="min-h-screen flex items-center px-6 relative overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #ffffff 0%, #caf0f8 50%, #90e0ef 100%)" }}
-    >
-      {/* Decorative blobs */}
-      <div
-        className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-30 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#00b4d8" }}
-      />
-      <div
-        className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#0077b6" }}
-      />
+    <section className="min-h-screen flex items-center px-6 relative overflow-hidden">
+      {/* Image de fond */}
+      <Image src="/heroimage.jpg" alt="" fill priority className="object-cover" />
+
+      {/* Overlay sombre pour lisibilité */}
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.45)" }} />
 
       <div className="max-w-6xl mx-auto w-full pt-28 pb-20 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Badge */}
+        <div className="mb-8">
+          <span
+            className="inline-flex items-center gap-2 text-sm font-medium px-4 py-1.5 rounded-full"
+            style={{ backgroundColor: "rgba(248,140,6,0.2)", color: "#faa307", border: "1px solid rgba(248,140,6,0.4)" }}
+          >
+            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#faa307" }} />
+            Disponible pour de nouveaux projets
+          </span>
+        </div>
 
-          {/* Left — texte */}
-          <div>
-            <div className="flex items-center gap-2 mb-6">
-              <span className="text-2xl">👋</span>
-              <span
-                className="text-sm font-semibold px-3 py-1 rounded-full"
-                style={{ backgroundColor: "rgba(0,119,182,0.12)", color: "#0077b6" }}
-              >
-                Bonjour, je suis Eléa
-              </span>
-            </div>
+        {/* Headline */}
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-white max-w-4xl">
+          Des sites web qui{" "}
+          <span className="relative inline-block" style={{ color: "#f48c06" }}>
+            travaillent
+            <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
+              <path d="M2 8 C75 2, 150 10, 298 4" stroke="#f48c06" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
+            </svg>
+          </span>{" "}
+          pour vous.
+        </h1>
 
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6"
-              style={{ color: "#03045e" }}
-            >
-              Je transforme vos idées en{" "}
-              <span
-                style={{
-                  color: "#0077b6",
-                  textDecoration: "underline",
-                  textDecorationColor: "#90e0ef",
-                  textDecorationThickness: "3px",
-                  textUnderlineOffset: "6px",
-                }}
-              >
-                sites qui vous ressemblent
-              </span>
-            </h1>
+        {/* Sous-titre */}
+        <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-xl" style={{ color: "#faa307", opacity: 0.9 }}>
+          Développeuse web freelance — je crée des expériences digitales rapides,
+          modernes et sur-mesure pour les indépendants, artisans et restaurateurs.
+        </p>
 
-            <p className="text-lg leading-relaxed mb-8" style={{ color: "#0077b6", opacity: 0.8 }}>
-              Développeuse web freelance, j&apos;accompagne les indépendants, artisans et
-              professionnels de la restauration & hôtellerie pour créer leur vitrine en ligne.
-            </p>
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-bold text-sm transition-all hover:scale-105 hover:shadow-xl"
+            style={{ backgroundColor: "#e85d04", color: "#fff", boxShadow: "0 8px 32px rgba(232,93,4,0.4)" }}
+          >
+            Démarrer mon projet →
+          </Link>
+          <Link
+            href="/services"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm transition-all hover:bg-white/10"
+            style={{ color: "#ffffff", border: "1.5px solid rgba(255,255,255,0.25)" }}
+          >
+            Voir mes services
+          </Link>
+        </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-12">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-white font-semibold shadow-lg transition-all hover:shadow-xl hover:scale-105"
-                style={{ backgroundColor: "#0077b6", boxShadow: "0 8px 24px rgba(0,119,182,0.3)" }}
-              >
-                ✨ Démarrer mon projet
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold bg-white/70 backdrop-blur-sm transition-all hover:bg-white"
-                style={{ border: "1.5px solid #90e0ef", color: "#0077b6" }}
-              >
-                Voir mes services →
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 pt-8" style={{ borderTop: "1.5px solid rgba(0,119,182,0.15)" }}>
-              {[
-                { value: "50+", label: "Projets réalisés" },
-                { value: "100%", label: "Clients satisfaits" },
-                { value: "24h", label: "Temps de réponse" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="text-3xl font-bold" style={{ color: "#03045e" }}>{s.value}</div>
-                  <div className="text-xs text-gray-500 mt-1 leading-tight">{s.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right — carte profil */}
-          <div className="hidden lg:flex justify-center">
-            <div
-              className="w-80 rounded-3xl p-8 shadow-2xl"
-              style={{
-                background: "linear-gradient(145deg, #03045e, #0077b6)",
-                boxShadow: "0 32px 64px rgba(3,4,94,0.3)",
-              }}
-            >
-              {/* Avatar */}
-              <div className="flex justify-center mb-6">
-                <div
-                  className="w-24 h-24 rounded-full flex items-center justify-center text-3xl font-bold font-mono text-white shadow-inner"
-                  style={{ background: "rgba(255,255,255,0.15)", border: "3px solid rgba(255,255,255,0.3)" }}
-                >
-                  EDS
-                </div>
-              </div>
-
-              <div className="text-center mb-6">
-                <h3 className="text-white font-bold text-xl mb-1">Eléa De Sousa</h3>
-                <p style={{ color: "#90e0ef" }} className="text-sm">Développeuse Web Freelance</p>
-              </div>
-
-              {/* Compétences */}
-              <div className="space-y-3">
-                {[
-                  { label: "React / Next.js", pct: 90 },
-                  { label: "UI / UX Design", pct: 80 },
-                  { label: "SEO & Performance", pct: 85 },
-                ].map((skill) => (
-                  <div key={skill.label}>
-                    <div className="flex justify-between text-xs mb-1" style={{ color: "#caf0f8" }}>
-                      <span>{skill.label}</span>
-                      <span>{skill.pct}%</span>
-                    </div>
-                    <div className="h-1.5 rounded-full" style={{ backgroundColor: "rgba(255,255,255,0.15)" }}>
-                      <div
-                        className="h-1.5 rounded-full"
-                        style={{ width: `${skill.pct}%`, backgroundColor: "#00b4d8" }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Disponibilité */}
-              <div
-                className="mt-6 rounded-2xl px-4 py-3 flex items-center gap-3"
-                style={{ backgroundColor: "rgba(255,255,255,0.1)" }}
-              >
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-400" />
-                </span>
-                <span className="text-sm text-white font-medium">Disponible pour de nouveaux projets</span>
-              </div>
-            </div>
-          </div>
-
+        {/* Services en ligne */}
+        <div className="mt-16 pt-10 flex flex-wrap gap-x-8 gap-y-3" style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+          {["Sites Vitrine", "E-commerce", "SEO & Performance", "Maintenance"].map((s) => (
+            <span key={s} className="text-sm flex items-center gap-2" style={{ color: "rgba(250,163,7,0.8)" }}>
+              <span style={{ color: "#f48c06" }}>✦</span> {s}
+            </span>
+          ))}
         </div>
       </div>
     </section>

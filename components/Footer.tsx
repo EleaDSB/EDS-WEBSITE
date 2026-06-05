@@ -6,16 +6,16 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="px-6 py-12 bg-white" style={{ borderTop: "1px solid #caf0f8" }}>
+    <footer className="px-6 py-12 bg-white" style={{ borderTop: "1px solid #fff3e0" }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <Link href="/" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
-          &lt;<span style={{ color: "#0077b6" }}>EDS</span>/&gt;
+        <Link href="/" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#dc2f02" }}>
+          &lt;<span style={{ color: "#e85d04" }}>EDS</span>/&gt;
         </Link>
 
         <nav className="flex gap-6 text-sm text-gray-500">
-          <Link href="/services" className="hover:text-[#0077b6] transition-colors">Services</Link>
-          <Link href="/processus" className="hover:text-[#0077b6] transition-colors">Processus</Link>
-          <Link href="/contact" className="hover:text-[#0077b6] transition-colors">Contact</Link>
+          <Link href="/services" className="hover:text-[#e85d04] transition-colors">Services</Link>
+          <Link href="/processus" className="hover:text-[#e85d04] transition-colors">Processus</Link>
+          <Link href="/contact" className="hover:text-[#e85d04] transition-colors">Contact</Link>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -24,9 +24,9 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors"
-            style={{ color: "#90e0ef" }}
-            onMouseEnter={e => (e.currentTarget.style.color = "#0077b6")}
-            onMouseLeave={e => (e.currentTarget.style.color = "#90e0ef")}
+            style={{ color: "#faa307" }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#e85d04")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#faa307")}
             aria-label="GitHub"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,9 +38,9 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors"
-            style={{ color: "#90e0ef" }}
-            onMouseEnter={e => (e.currentTarget.style.color = "#0077b6")}
-            onMouseLeave={e => (e.currentTarget.style.color = "#90e0ef")}
+            style={{ color: "#faa307" }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#e85d04")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#faa307")}
             aria-label="LinkedIn"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-6 text-center text-xs text-gray-400" style={{ borderTop: "1px solid #caf0f8" }}>
+      <div className="max-w-6xl mx-auto mt-8 pt-6 text-center text-xs text-gray-400" style={{ borderTop: "1px solid #fff3e0" }}>
         © {year} EDS Web Solutions. Tous droits réservés.
       </div>
     </footer>
