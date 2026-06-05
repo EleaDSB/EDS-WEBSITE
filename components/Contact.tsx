@@ -53,43 +53,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24 px-6" style={{ backgroundColor: "#caf0f8" }}>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div>
-            <h2 className="text-4xl font-bold mb-4" style={{ color: "#03045e" }}>Démarrons votre projet</h2>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: "#0077b6" }}>
-              Parlez-moi de votre projet et recevez un devis gratuit sous 24h. Aucun engagement.
-            </p>
-
-            <div className="space-y-6">
-              {[
-                { icon: "📧", label: "Email", value: "contact@eds-web.fr", href: "mailto:contact@eds-web.fr" },
-                { icon: "⏱️", label: "Temps de réponse", value: "Sous 24h, jours ouvrés" },
-                { icon: "📍", label: "Localisation", value: "France — disponible en remote" },
-              ].map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center text-sm flex-shrink-0"
-                    style={{ backgroundColor: "#90e0ef" }}
-                  >
-                    {item.icon}
-                  </div>
-                  <div>
-                    <div className="text-sm font-medium mb-0.5" style={{ color: "#03045e" }}>{item.label}</div>
-                    {item.href ? (
-                      <a href={item.href} className="text-sm text-gray-500 hover:text-[#0077b6] transition-colors">
-                        {item.value}
-                      </a>
-                    ) : (
-                      <div className="text-sm text-gray-500">{item.value}</div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 border shadow-sm" style={{ borderColor: "#90e0ef" }}>
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-white rounded-2xl p-8 border shadow-sm" style={{ borderColor: "#90e0ef" }}>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
@@ -143,7 +108,6 @@ export default function Contact() {
                 )}
               </button>
             </form>
-          </div>
         </div>
       </div>
     </section>
