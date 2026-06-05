@@ -28,12 +28,6 @@ export default function About() {
                 <span className="font-mono text-5xl font-black text-white tracking-tighter">&lt;EDS/&gt;</span>
               </div>
               {/* Badges flottants */}
-              <div
-                className="absolute -top-4 -right-4 px-4 py-2 rounded-full text-sm font-semibold text-white shadow-lg"
-                style={{ background: "linear-gradient(135deg, #e85d04, #faa307)" }}
-              >
-                5+ ans d'expérience
-              </div>
             </div>
           </div>
 
