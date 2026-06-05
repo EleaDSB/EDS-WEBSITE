@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const values = [
   { icon: "🎯", title: "Sur-mesure", description: "Chaque projet est unique. Je prends le temps de comprendre votre activité avant d'écrire la moindre ligne de code." },
@@ -12,22 +13,20 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Visuel décoratif */}
+          {/* Photo de profil */}
           <div className="flex justify-center lg:justify-start">
-            <div className="relative w-80 h-80">
-              {/* Cercle de fond */}
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{ background: "linear-gradient(135deg, #fff3e0, #ffe0b2)" }}
-              />
-              {/* Cercle intérieur */}
-              <div
-                className="absolute inset-8 rounded-full flex items-center justify-center shadow-xl"
-                style={{ background: "linear-gradient(135deg, #dc2f02, #f48c06)" }}
-              >
-                <span className="font-mono text-5xl font-black text-white tracking-tighter">&lt;EDS/&gt;</span>
+            <div
+              className="relative w-80 h-80 rounded-full p-1.5 shadow-xl"
+              style={{ background: "linear-gradient(135deg, #dc2f02, #f48c06)" }}
+            >
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <Image
+                  src="/apropos.jpg"
+                  alt="Eléa De Sousa"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              {/* Badges flottants */}
             </div>
           </div>
 
