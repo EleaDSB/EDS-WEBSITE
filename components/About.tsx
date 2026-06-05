@@ -34,12 +34,6 @@ export default function About() {
               >
                 5+ ans d'expérience
               </div>
-              <div
-                className="absolute -bottom-4 -left-4 px-4 py-2 rounded-full text-sm font-semibold shadow-lg"
-                style={{ backgroundColor: "#fff3e0", color: "#dc2f02", border: "1.5px solid #faa307" }}
-              >
-                🇫🇷 Basée en France
-              </div>
             </div>
           </div>
 
