@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const services = [
   { icon: "⚡", title: "Sites Vitrine", description: "Design moderne, responsive et optimisé SEO pour mettre en valeur votre activité et convertir vos visiteurs.", gradient: "from-[#dc2f02] to-[#f48c06]" },
-  { icon: "🛒", title: "E-commerce", description: "Boutiques en ligne complètes avec gestion des paiements, des stocks et de l'expérience d'achat.", gradient: "from-[#e85d04] to-[#faa307]" },
+  { icon: "🛍️", title: "E-commerce", description: "Boutiques en ligne complètes avec gestion des paiements, des stocks et de l'expérience d'achat.", gradient: "from-[#e85d04] to-[#faa307]" },
   { icon: "📱", title: "Mobile First", description: "Chaque site est conçu d'abord pour mobile — une expérience parfaite sur tous les écrans.", gradient: "from-[#f48c06] to-[#ffba08]" },
   { icon: "🔒", title: "Sécurité", description: "Protection contre les failles courantes, HTTPS, validation des données et conformité RGPD.", gradient: "from-[#dc2f02] to-[#e85d04]" },
   { icon: "🚀", title: "Performance", description: "Temps de chargement optimisés, Core Web Vitals au vert et scores Lighthouse élevés.", gradient: "from-[#e85d04] to-[#f48c06]" },
