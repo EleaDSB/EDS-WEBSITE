@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const steps = [
   { number: "01", icon: "🔍", title: "Analyse des besoins", description: "On échange sur votre projet, vos objectifs et votre cible. Je vous propose une solution adaptée avec un devis détaillé sous 24h." },
   { number: "02", icon: "🎨", title: "Design & Maquettage", description: "Création de maquettes interactives pour valider l'identité visuelle et l'expérience utilisateur avant tout développement." },
@@ -8,12 +10,16 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="processus" className="py-20 px-6 bg-white">
-      <div className="max-w-3xl mx-auto">
+    <section id="processus" className="py-20 px-6 relative overflow-hidden">
+      {/* Image de fond */}
+      <Image src="/heroimage.jpg" alt="" fill className="object-cover" />
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.65)" }} />
+
+      <div className="max-w-3xl mx-auto relative z-10">
         <div className="relative">
           <div
             className="absolute left-7 top-8 bottom-8 w-0.5"
-            style={{ background: "linear-gradient(to bottom, #e85d04, #fff3e0)" }}
+            style={{ background: "linear-gradient(to bottom, #f48c06, rgba(244,140,6,0.1))" }}
           />
           <div className="space-y-2">
             {steps.map((step, i) => (
@@ -23,25 +29,25 @@ export default function Process() {
                   style={
                     i === 0
                       ? { background: "linear-gradient(135deg, #dc2f02, #e85d04)", color: "#fff" }
-                      : { backgroundColor: "#fff", color: "#e85d04", border: "2px solid #faa307" }
+                      : { backgroundColor: "rgba(255,255,255,0.1)", color: "#faa307", border: "2px solid rgba(250,163,7,0.5)" }
                   }
                 >
                   {step.icon}
                 </div>
                 <div
-                  className="flex-1 mb-8 rounded-3xl p-6 transition-all duration-200 group-hover:shadow-md"
-                  style={{ backgroundColor: i % 2 === 0 ? "#fff" : "#fffbf5", border: "1.5px solid #fff3e0" }}
+                  className="flex-1 mb-8 rounded-3xl p-6 transition-all duration-200 group-hover:shadow-xl"
+                  style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.12)", backdropFilter: "blur(8px)" }}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span
                       className="text-xs font-bold px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: "#fff3e0", color: "#e85d04" }}
+                      style={{ backgroundColor: "rgba(244,140,6,0.25)", color: "#faa307" }}
                     >
                       Étape {step.number}
                     </span>
-                    <h3 className="text-base font-bold" style={{ color: "#dc2f02" }}>{step.title}</h3>
+                    <h3 className="text-base font-bold text-white">{step.title}</h3>
                   </div>
-                  <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{step.description}</p>
                 </div>
               </div>
             ))}
