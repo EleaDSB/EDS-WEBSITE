@@ -5,10 +5,30 @@ type Props = {
 
 export default function PageBanner({ title, subtitle }: Props) {
   return (
-    <section className="py-16 px-6" style={{ backgroundColor: "#03045e" }}>
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{title}</h1>
-        <p className="text-lg" style={{ color: "#90e0ef" }}>{subtitle}</p>
+    <section
+      className="relative py-20 px-6 overflow-hidden"
+      style={{ background: "linear-gradient(135deg, #03045e 0%, #0077b6 100%)" }}
+    >
+      {/* Cercles décoratifs */}
+      <div
+        className="absolute -top-12 -right-12 w-64 h-64 rounded-full opacity-10 pointer-events-none"
+        style={{ backgroundColor: "#caf0f8" }}
+      />
+      <div
+        className="absolute -bottom-16 -left-8 w-48 h-48 rounded-full opacity-10 pointer-events-none"
+        style={{ backgroundColor: "#00b4d8" }}
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 leading-tight">{title}</h1>
+        <p className="text-lg max-w-xl" style={{ color: "#90e0ef" }}>{subtitle}</p>
+      </div>
+
+      {/* Vague en bas */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+          <path d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40 Z" fill="white" />
+        </svg>
       </div>
     </section>
   );
