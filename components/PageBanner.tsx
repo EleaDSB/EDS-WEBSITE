@@ -6,7 +6,7 @@ type Props = {
 export default function PageBanner({ title, subtitle }: Props) {
   return (
     <section
-      className="relative py-20 px-6 overflow-hidden"
+      className="relative pt-32 pb-20 px-6 overflow-hidden"
       style={{ background: "linear-gradient(135deg, #03045e 0%, #0077b6 100%)" }}
     >
       {/* Cercles décoratifs */}

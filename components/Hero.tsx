@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section
-      className="min-h-[calc(100vh-4rem)] flex items-center px-6 relative overflow-hidden"
+      className="min-h-screen flex items-center px-6 relative overflow-hidden"
       style={{ background: "linear-gradient(135deg, #ffffff 0%, #caf0f8 50%, #90e0ef 100%)" }}
     >
       {/* Decorative blobs */}
@@ -16,7 +16,7 @@ export default function Hero() {
         style={{ backgroundColor: "#0077b6" }}
       />
 
-      <div className="max-w-6xl mx-auto w-full py-20 relative z-10">
+      <div className="max-w-6xl mx-auto w-full pt-28 pb-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left — texte */}
