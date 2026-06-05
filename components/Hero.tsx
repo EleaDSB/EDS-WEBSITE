@@ -13,14 +13,13 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto w-full pt-28 pb-20 relative z-10">
         {/* Headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-white max-w-4xl">
-          Des sites web qui{" "}
+          Votre activité mérite une vitrine à la hauteur de{" "}
           <span className="relative inline-block" style={{ color: "#f48c06" }}>
-            travaillent
+            vos ambitions
             <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 12" fill="none">
               <path d="M2 8 C75 2, 150 10, 298 4" stroke="#f48c06" strokeWidth="3" strokeLinecap="round" opacity="0.6" />
             </svg>
-          </span>{" "}
-          pour vous.
+          </span>.
         </h1>
 
         {/* Sous-titre */}
