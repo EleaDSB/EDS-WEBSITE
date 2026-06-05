@@ -10,10 +10,7 @@ export default function PageBanner({ title, subtitle, image }: Props) {
   return (
     <section
       className="relative pt-32 pb-20 px-6 overflow-hidden"
-      style={{
-        ...(image ? {} : { background: "linear-gradient(135deg, #dc2f02 0%, #f48c06 100%)" }),
-        borderRadius: "0 0 2.5rem 2.5rem",
-      }}
+      style={image ? undefined : { background: "linear-gradient(135deg, #dc2f02 0%, #f48c06 100%)" }}
     >
       {image && (
         <>
