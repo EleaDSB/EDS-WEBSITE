@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -6,23 +7,20 @@ export default function Hero() {
       className="min-h-screen flex items-center px-6 relative overflow-hidden"
       style={{ backgroundColor: "#03045e" }}
     >
-      {/* Blobs décoratifs */}
-      <div
-        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#00b4d8" }}
-      />
-      <div
-        className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
-        style={{ backgroundColor: "#0077b6" }}
+      {/* Image de fond */}
+      <Image
+        src="/heroimage.jpg"
+        alt=""
+        fill
+        priority
+        className="object-cover"
+        style={{ opacity: 0.25 }}
       />
 
-      {/* Grille de points décoratifs */}
+      {/* Overlay dégradé pour lisibilité */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "linear-gradient(to right, rgba(3,4,94,0.85) 40%, rgba(3,4,94,0.4) 100%)" }}
       />
 
       <div className="max-w-6xl mx-auto w-full pt-28 pb-20 relative z-10">
