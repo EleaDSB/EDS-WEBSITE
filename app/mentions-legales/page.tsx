@@ -13,7 +13,6 @@ const sections = [
       "**Responsable de publication :** Eléa De Sousa",
       "**Adresse :** Toulouse, France",
       "**Email :** contact@eds-web.fr",
-      "**Statut :** Auto-entrepreneur",
     ],
   },
   {
