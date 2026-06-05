@@ -50,11 +50,11 @@ export default function Header() {
             href="/"
             className="font-mono font-bold tracking-tight shrink-0 transition-all duration-300"
             style={{
-              color: "#03045e",
+              color: "#dc2f02",
               fontSize: floating ? "15px" : "18px",
             }}
           >
-            &lt;<span style={{ color: "#0077b6" }}>EDS</span>/&gt;
+            &lt;<span style={{ color: "#e85d04" }}>EDS</span>/&gt;
           </Link>
 
           {/* Nav desktop */}
@@ -86,7 +86,7 @@ export default function Header() {
               href="/contact"
               className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
               style={{
-                background: "linear-gradient(135deg, #0077b6, #00b4d8)",
+                background: "linear-gradient(135deg, #dc2f02, #f48c06)",
                 boxShadow: "0 4px 12px rgba(0,119,182,0.25)",
               }}
             >
@@ -96,7 +96,7 @@ export default function Header() {
             <button
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-full transition-colors"
               style={{
-                color: "#03045e",
+                color: "#dc2f02",
                 backgroundColor: open ? "rgba(0,119,182,0.1)" : "transparent",
               }}
               onClick={() => setOpen(!open)}
@@ -135,7 +135,7 @@ export default function Header() {
             <Link
               href="/contact"
               className="mt-1 text-sm font-semibold px-4 py-3 rounded-2xl text-white text-center"
-              style={{ background: "linear-gradient(135deg, #0077b6, #00b4d8)" }}
+              style={{ background: "linear-gradient(135deg, #dc2f02, #f48c06)" }}
             >
               ✦ Démarrer un projet
             </Link>
