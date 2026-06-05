@@ -11,17 +11,6 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.45)" }} />
 
       <div className="max-w-6xl mx-auto w-full pt-28 pb-20 relative z-10">
-        {/* Badge */}
-        <div className="mb-8">
-          <span
-            className="inline-flex items-center gap-2 text-sm font-medium px-4 py-1.5 rounded-full"
-            style={{ backgroundColor: "rgba(248,140,6,0.2)", color: "#faa307", border: "1px solid rgba(248,140,6,0.4)" }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "#faa307" }} />
-            Disponible pour de nouveaux projets
-          </span>
-        </div>
-
         {/* Headline */}
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-white max-w-4xl">
           Des sites web qui{" "}
