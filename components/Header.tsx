@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { label: "Mes services", href: "/services" },
-  { label: "Comment je fonctionne", href: "/processus" },
+  { label: "Comment je fonctionne ?", href: "/processus" },
 ];
 
 export default function Header() {
