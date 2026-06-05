@@ -13,7 +13,6 @@ export default function ContactPage() {
       <PageBanner
         title="Démarrons votre projet"
         subtitle="Devis gratuit sous 24h, sans engagement."
-        image="/contact.jpg"
       />
       <Contact />
     </>

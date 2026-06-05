@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 type FormData = { name: string; email: string; subject: string; message: string };
 type Status = { type: "success" | "error" | ""; message: string };
@@ -42,8 +43,10 @@ export default function Contact() {
     "w-full px-4 py-3 rounded-xl border text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 transition-colors border-[#ffe0b2] focus:border-[#f48c06] focus:ring-[#f48c06]";
 
   return (
-    <section id="contact" className="py-24 px-6" style={{ backgroundColor: "#fff8f0" }}>
-      <div className="max-w-2xl mx-auto">
+    <section id="contact" className="py-24 px-6 relative overflow-hidden">
+      <Image src="/contact.jpg" alt="" fill className="object-cover" />
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
+      <div className="max-w-2xl mx-auto relative z-10">
         <div className="bg-white rounded-2xl p-8 border shadow-sm" style={{ borderColor: "#ffe0b2" }}>
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
