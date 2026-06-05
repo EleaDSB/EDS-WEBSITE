@@ -65,15 +65,15 @@ export default function Header() {
                 href={l.href}
                 className="relative text-sm font-medium px-4 py-2 rounded-full transition-all duration-200"
                 style={{
-                  color: pathname === l.href ? "#0077b6" : "#444",
-                  backgroundColor: pathname === l.href ? "rgba(0,119,182,0.08)" : "transparent",
+                  color: pathname === l.href ? "#f97316" : "#444",
+                  backgroundColor: pathname === l.href ? "rgba(249,115,22,0.08)" : "transparent",
                 }}
               >
                 {l.label}
                 {pathname === l.href && (
                   <span
                     className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-                    style={{ backgroundColor: "#0077b6" }}
+                    style={{ backgroundColor: "#f97316" }}
                   />
                 )}
               </Link>
@@ -125,8 +125,8 @@ export default function Header() {
                 href={l.href}
                 className="text-sm font-medium px-4 py-3 rounded-2xl transition-colors"
                 style={{
-                  color: pathname === l.href ? "#0077b6" : "#444",
-                  backgroundColor: pathname === l.href ? "rgba(0,119,182,0.07)" : "transparent",
+                  color: pathname === l.href ? "#f97316" : "#444",
+                  backgroundColor: pathname === l.href ? "rgba(249,115,22,0.07)" : "transparent",
                 }}
               >
                 {l.label}
