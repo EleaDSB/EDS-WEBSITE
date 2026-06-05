@@ -62,7 +62,7 @@ export default function Header() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="relative text-sm font-medium px-4 py-2 rounded-full transition-all duration-200"
+                className="relative text-base font-medium px-4 py-2 rounded-full transition-all duration-200"
                 style={{
                   color: pathname === l.href
                     ? "#f48c06"
@@ -87,7 +87,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
+              className="hidden md:inline-flex items-center gap-1.5 text-base font-semibold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
               style={{
                 background: "linear-gradient(135deg, #dc2f02, #f48c06)",
                 boxShadow: "0 4px 12px rgba(220,47,2,0.25)",
