@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 const links = [
   { label: "Services", href: "/services" },
   { label: "Processus", href: "/processus" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -84,8 +83,18 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* burger */}
+          {/* CTA + burger */}
           <div className="flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold px-4 py-2 rounded-full text-white transition-all duration-200 hover:scale-105 hover:shadow-md"
+              style={{
+                background: "linear-gradient(135deg, #dc2f02, #f48c06)",
+                boxShadow: "0 4px 12px rgba(220,47,2,0.25)",
+              }}
+            >
+              <span>✦</span> Démarrer un projet
+            </Link>
             <button
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-full transition-colors"
               style={{
