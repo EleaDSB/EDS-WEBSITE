@@ -16,10 +16,10 @@ export default function About() {
           {/* Photo de profil */}
           <div className="flex justify-center lg:justify-start">
             <div
-              className="relative w-80 h-80 rounded-full p-1.5 shadow-xl"
+              className="w-80 h-80 rounded-full p-1.5 shadow-xl flex-shrink-0"
               style={{ background: "linear-gradient(135deg, #dc2f02, #f48c06)" }}
             >
-              <div className="w-full h-full rounded-full overflow-hidden">
+              <div className="relative w-full h-full rounded-full overflow-hidden">
                 <Image
                   src="/apropos.jpg"
                   alt="Eléa De Sousa"
