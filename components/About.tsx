@@ -58,7 +58,7 @@ export default function About() {
 
             <p className="text-gray-600 leading-relaxed mb-4">
               Je suis Eléa, développeuse web freelance spécialisée dans la création de sites pour les
-              <strong className="text-gray-800"> indépendants, artisans et professionnels de la restauration.</strong>
+              <strong className="text-gray-800"> indépendants et artisans.</strong>
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Quand vous travaillez avec moi, vous avez un interlocuteur unique qui s'occupe de tout —

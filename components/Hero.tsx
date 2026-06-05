@@ -37,7 +37,7 @@ export default function Hero() {
         {/* Sous-titre */}
         <p className="text-lg md:text-xl leading-relaxed mb-10 max-w-xl" style={{ color: "#faa307", opacity: 0.9 }}>
           Développeuse web freelance — je crée des expériences digitales rapides,
-          modernes et sur-mesure pour les indépendants, artisans et restaurateurs.
+          modernes et sur-mesure pour les indépendants et artisans.
         </p>
 
         {/* CTAs */}
