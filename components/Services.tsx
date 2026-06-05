@@ -6,7 +6,7 @@ const services = [
   { icon: "📱", title: "Mobile First", description: "Chaque site est conçu d'abord pour mobile — une expérience parfaite sur tous les écrans.", gradient: "from-[#f48c06] to-[#ffba08]" },
   { icon: "🔒", title: "Sécurité", description: "Protection contre les failles courantes, HTTPS, validation des données et conformité RGPD.", gradient: "from-[#dc2f02] to-[#e85d04]" },
   { icon: "🚀", title: "Performance", description: "Temps de chargement optimisés, Core Web Vitals au vert et scores Lighthouse élevés.", gradient: "from-[#e85d04] to-[#f48c06]" },
-  { icon: "🤝", title: "Maintenance", description: "Accompagnement après livraison : mises à jour, monitoring et support technique réactif.", gradient: "from-[#f48c06] to-[#faa307]" },
+  { icon: "🤝", title: "Maintenance", description: "Accompagnement après livraison.", gradient: "from-[#f48c06] to-[#faa307]" },
 ];
 
 export default function Services() {
