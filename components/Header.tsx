@@ -50,11 +50,11 @@ export default function Header() {
             href="/"
             className="font-mono font-bold tracking-tight shrink-0 transition-all duration-300"
             style={{
-              color: "#dc2f02",
+              color: floating ? "#dc2f02" : "#ffffff",
               fontSize: floating ? "15px" : "18px",
             }}
           >
-            &lt;<span style={{ color: "#e85d04" }}>EDS</span>/&gt;
+            &lt;<span style={{ color: floating ? "#e85d04" : "#faa307" }}>EDS</span>/&gt;
           </Link>
 
           {/* Nav desktop */}
@@ -65,15 +65,19 @@ export default function Header() {
                 href={l.href}
                 className="relative text-sm font-medium px-4 py-2 rounded-full transition-all duration-200"
                 style={{
-                  color: pathname === l.href ? "#f97316" : "#444",
-                  backgroundColor: pathname === l.href ? "rgba(249,115,22,0.08)" : "transparent",
+                  color: pathname === l.href
+                    ? "#f48c06"
+                    : floating ? "#111" : "rgba(255,255,255,0.9)",
+                  backgroundColor: pathname === l.href
+                    ? floating ? "rgba(244,140,6,0.1)" : "rgba(255,255,255,0.15)"
+                    : "transparent",
                 }}
               >
                 {l.label}
                 {pathname === l.href && (
                   <span
                     className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-                    style={{ backgroundColor: "#f97316" }}
+                    style={{ backgroundColor: "#f48c06" }}
                   />
                 )}
               </Link>
@@ -96,8 +100,8 @@ export default function Header() {
             <button
               className="md:hidden w-9 h-9 flex items-center justify-center rounded-full transition-colors"
               style={{
-                color: "#dc2f02",
-                backgroundColor: open ? "rgba(0,119,182,0.1)" : "transparent",
+                color: floating ? "#dc2f02" : "#ffffff",
+                backgroundColor: open ? "rgba(244,140,6,0.1)" : "transparent",
               }}
               onClick={() => setOpen(!open)}
               aria-label="Menu"
