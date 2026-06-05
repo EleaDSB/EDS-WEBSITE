@@ -50,8 +50,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-6 text-center text-xs text-gray-400" style={{ borderTop: "1px solid #fff3e0" }}>
-        © {year} EDS Web Solutions. Tous droits réservés.
+      <div className="max-w-6xl mx-auto mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400" style={{ borderTop: "1px solid #fff3e0" }}>
+        <span>© {year} EDS Web Solutions. Tous droits réservés.</span>
+        <Link href="/mentions-legales" className="hover:text-[#e85d04] transition-colors">Mentions légales</Link>
       </div>
     </footer>
   );
