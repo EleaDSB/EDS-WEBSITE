@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { label: "Services", href: "/services" },
-  { label: "Processus", href: "/processus" },
+  { label: "Mes services", href: "/services" },
+  { label: "Comment je fonctionne", href: "/processus" },
 ];
 
 export default function Header() {
