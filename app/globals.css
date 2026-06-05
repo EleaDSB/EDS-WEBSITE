@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-accent: #00C896;
-  --color-accent-dark: #00A87E;
+  --color-navy: #03045e;
+  --color-blue: #0077b6;
+  --color-cyan: #00b4d8;
+  --color-light: #90e0ef;
+  --color-pale: #caf0f8;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

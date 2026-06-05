@@ -21,12 +21,12 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-sm border-b border-[#caf0f8] shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-mono text-lg font-bold tracking-tight">
-          &lt;<span style={{ color: "#00C896" }}>EDS</span>/&gt;
+        <a href="#" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
+          &lt;<span style={{ color: "#0077b6" }}>EDS</span>/&gt;
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -34,7 +34,7 @@ export default function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-600 hover:text-black transition-colors"
+              className="text-sm text-gray-600 hover:text-[#0077b6] transition-colors"
             >
               {l.label}
             </a>
@@ -42,7 +42,7 @@ export default function Header() {
           <a
             href="#contact"
             className="text-sm px-4 py-2 rounded-full text-white font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "#00C896" }}
+            style={{ backgroundColor: "#0077b6" }}
           >
             Démarrer un projet
           </a>
@@ -64,12 +64,12 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white border-t border-[#caf0f8] px-6 py-4 flex flex-col gap-4">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-700 hover:text-black"
+              className="text-sm text-gray-700 hover:text-[#0077b6] transition-colors"
               onClick={() => setOpen(false)}
             >
               {l.label}
@@ -78,7 +78,7 @@ export default function Header() {
           <a
             href="#contact"
             className="text-sm px-4 py-2 rounded-full text-white font-medium text-center"
-            style={{ backgroundColor: "#00C896" }}
+            style={{ backgroundColor: "#0077b6" }}
             onClick={() => setOpen(false)}
           >
             Démarrer un projet

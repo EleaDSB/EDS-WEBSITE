@@ -36,8 +36,8 @@ export default function Process() {
     <section id="processus" className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Comment ça se passe ?</h2>
-          <p className="text-gray-500 text-lg max-w-xl">
+          <h2 className="text-4xl font-bold mb-4" style={{ color: "#03045e" }}>Comment ça se passe ?</h2>
+          <p className="text-lg max-w-xl" style={{ color: "#0077b6" }}>
             Un processus transparent, pensé pour vous livrer un site qui dépasse vos attentes.
           </p>
         </div>
@@ -46,19 +46,19 @@ export default function Process() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className="flex gap-6 p-6 rounded-2xl hover:bg-gray-50 transition-colors duration-200 group"
+              className="flex gap-6 p-6 rounded-2xl transition-colors duration-200 group hover:bg-[#caf0f8]"
             >
               <div
                 className="flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center font-mono text-sm font-bold transition-colors duration-200"
                 style={{
-                  backgroundColor: i === 0 ? "#00C896" : "#00C89615",
-                  color: i === 0 ? "#fff" : "#00C896",
+                  backgroundColor: i === 0 ? "#0077b6" : "#caf0f8",
+                  color: i === 0 ? "#fff" : "#0077b6",
                 }}
               >
                 {step.number}
               </div>
               <div className="pt-1">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <h3 className="text-lg font-semibold mb-2" style={{ color: "#03045e" }}>{step.title}</h3>
                 <p className="text-gray-500 leading-relaxed text-sm max-w-2xl">{step.description}</p>
               </div>
             </div>

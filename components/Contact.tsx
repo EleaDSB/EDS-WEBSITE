@@ -48,126 +48,76 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#00C896] focus:ring-1 focus:ring-[#00C896] transition-colors";
+    "w-full px-4 py-3 rounded-xl border text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 transition-colors"
+    + " border-[#90e0ef] focus:border-[#00b4d8] focus:ring-[#00b4d8]";
 
   return (
-    <section id="contact" className="py-24 px-6 bg-gray-50">
+    <section id="contact" className="py-24 px-6" style={{ backgroundColor: "#caf0f8" }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Démarrons votre projet</h2>
-            <p className="text-gray-500 text-lg leading-relaxed mb-10">
+            <h2 className="text-4xl font-bold mb-4" style={{ color: "#03045e" }}>Démarrons votre projet</h2>
+            <p className="text-lg leading-relaxed mb-10" style={{ color: "#0077b6" }}>
               Parlez-moi de votre projet et recevez un devis gratuit sous 24h. Aucun engagement.
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-sm flex-shrink-0"
-                  style={{ backgroundColor: "#00C89615" }}
-                >
-                  📧
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-gray-900 mb-0.5">Email</div>
-                  <a
-                    href="mailto:contact@eds-web.fr"
-                    className="text-sm text-gray-500 hover:text-[#00C896] transition-colors"
+              {[
+                { icon: "📧", label: "Email", value: "contact@eds-web.fr", href: "mailto:contact@eds-web.fr" },
+                { icon: "⏱️", label: "Temps de réponse", value: "Sous 24h, jours ouvrés" },
+                { icon: "📍", label: "Localisation", value: "France — disponible en remote" },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-4">
+                  <div
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-sm flex-shrink-0"
+                    style={{ backgroundColor: "#90e0ef" }}
                   >
-                    contact@eds-web.fr
-                  </a>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium mb-0.5" style={{ color: "#03045e" }}>{item.label}</div>
+                    {item.href ? (
+                      <a href={item.href} className="text-sm text-gray-500 hover:text-[#0077b6] transition-colors">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <div className="text-sm text-gray-500">{item.value}</div>
+                    )}
+                  </div>
                 </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-sm flex-shrink-0"
-                  style={{ backgroundColor: "#00C89615" }}
-                >
-                  ⏱️
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-gray-900 mb-0.5">Temps de réponse</div>
-                  <div className="text-sm text-gray-500">Sous 24h, jours ouvrés</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-sm flex-shrink-0"
-                  style={{ backgroundColor: "#00C89615" }}
-                >
-                  📍
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-gray-900 mb-0.5">Localisation</div>
-                  <div className="text-sm text-gray-500">France — disponible en remote</div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <div className="bg-white rounded-2xl p-8 border shadow-sm" style={{ borderColor: "#90e0ef" }}>
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Nom</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="Jean Dupont"
-                    className={inputClass}
-                  />
+                  <label className="block text-sm font-medium mb-2" style={{ color: "#03045e" }}>Nom</label>
+                  <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="Jean Dupont" className={inputClass} />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    placeholder="jean@exemple.com"
-                    className={inputClass}
-                  />
+                  <label className="block text-sm font-medium mb-2" style={{ color: "#03045e" }}>Email</label>
+                  <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="jean@exemple.com" className={inputClass} />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Sujet</label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={form.subject}
-                  onChange={handleChange}
-                  required
-                  placeholder="Création d'un site vitrine"
-                  className={inputClass}
-                />
+                <label className="block text-sm font-medium mb-2" style={{ color: "#03045e" }}>Sujet</label>
+                <input type="text" name="subject" value={form.subject} onChange={handleChange} required placeholder="Création d'un site vitrine" className={inputClass} />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                <textarea
-                  name="message"
-                  value={form.message}
-                  onChange={handleChange}
-                  required
-                  rows={5}
-                  placeholder="Décrivez votre projet, vos besoins et vos objectifs..."
-                  className={inputClass + " resize-none"}
-                />
+                <label className="block text-sm font-medium mb-2" style={{ color: "#03045e" }}>Message</label>
+                <textarea name="message" value={form.message} onChange={handleChange} required rows={5} placeholder="Décrivez votre projet, vos besoins et vos objectifs..." className={inputClass + " resize-none"} />
               </div>
 
               {status.message && (
                 <div
-                  className={`text-sm px-4 py-3 rounded-xl ${
+                  className={`text-sm px-4 py-3 rounded-xl border ${
                     status.type === "success"
-                      ? "bg-green-50 text-green-700 border border-green-100"
-                      : "bg-red-50 text-red-600 border border-red-100"
+                      ? "bg-[#caf0f8] border-[#90e0ef] text-[#0077b6]"
+                      : "bg-red-50 border-red-100 text-red-600"
                   }`}
                 >
                   {status.message}
@@ -178,7 +128,7 @@ export default function Contact() {
                 type="submit"
                 disabled={loading}
                 className="w-full py-3 rounded-xl text-white font-medium text-sm transition-opacity hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                style={{ backgroundColor: "#00C896" }}
+                style={{ backgroundColor: "#0077b6" }}
               >
                 {loading ? (
                   <>

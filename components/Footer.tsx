@@ -1,17 +1,19 @@
+"use client";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-100 bg-white px-6 py-12">
+    <footer className="px-6 py-12 bg-white" style={{ borderTop: "1px solid #caf0f8" }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="#" className="font-mono text-lg font-bold tracking-tight">
-          &lt;<span style={{ color: "#00C896" }}>EDS</span>/&gt;
+        <a href="#" className="font-mono text-lg font-bold tracking-tight" style={{ color: "#03045e" }}>
+          &lt;<span style={{ color: "#0077b6" }}>EDS</span>/&gt;
         </a>
 
         <nav className="flex gap-6 text-sm text-gray-500">
-          <a href="#services" className="hover:text-black transition-colors">Services</a>
-          <a href="#processus" className="hover:text-black transition-colors">Processus</a>
-          <a href="#contact" className="hover:text-black transition-colors">Contact</a>
+          <a href="#services" className="hover:text-[#0077b6] transition-colors">Services</a>
+          <a href="#processus" className="hover:text-[#0077b6] transition-colors">Processus</a>
+          <a href="#contact" className="hover:text-[#0077b6] transition-colors">Contact</a>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -19,7 +21,10 @@ export default function Footer() {
             href="https://github.com/EleaDSB"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-black transition-colors"
+            className="transition-colors"
+            style={{ color: "#90e0ef" }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#0077b6")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#90e0ef")}
             aria-label="GitHub"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -30,7 +35,10 @@ export default function Footer() {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-black transition-colors"
+            className="transition-colors"
+            style={{ color: "#90e0ef" }}
+            onMouseEnter={e => (e.currentTarget.style.color = "#0077b6")}
+            onMouseLeave={e => (e.currentTarget.style.color = "#90e0ef")}
             aria-label="LinkedIn"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -40,7 +48,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-gray-50 text-center text-xs text-gray-400">
+      <div className="max-w-6xl mx-auto mt-8 pt-6 text-center text-xs text-gray-400" style={{ borderTop: "1px solid #caf0f8" }}>
         © {year} EDS Web Solutions. Tous droits réservés.
       </div>
     </footer>

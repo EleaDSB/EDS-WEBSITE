@@ -39,11 +39,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-6 bg-gray-50">
+    <section id="services" className="py-24 px-6" style={{ backgroundColor: "#caf0f8" }}>
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Mes services</h2>
-          <p className="text-gray-500 text-lg max-w-xl">
+          <h2 className="text-4xl font-bold mb-4" style={{ color: "#03045e" }}>Mes services</h2>
+          <p className="text-lg max-w-xl" style={{ color: "#0077b6" }}>
             Des solutions complètes pour concrétiser votre projet web, de la conception à la mise en ligne.
           </p>
         </div>
@@ -52,15 +52,19 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#00C896]/30 hover:shadow-md transition-all duration-200 group"
+              className="bg-white rounded-2xl p-8 border transition-all duration-200 group hover:shadow-md"
+              style={{ borderColor: "#90e0ef" }}
             >
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-6"
-                style={{ backgroundColor: "#00C89615" }}
+                style={{ backgroundColor: "#caf0f8" }}
               >
                 {s.icon}
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-[#00C896] transition-colors">
+              <h3
+                className="text-lg font-semibold mb-3 transition-colors group-hover:text-[#00b4d8]"
+                style={{ color: "#03045e" }}
+              >
                 {s.title}
               </h3>
               <p className="text-gray-500 leading-relaxed text-sm">{s.description}</p>

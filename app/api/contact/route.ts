@@ -1,9 +1,9 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const { name, email, subject, message } = await request.json();
 
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       subject: `[EDS] ${subject}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #00C896;">Nouveau message de contact</h2>
+          <h2 style="color: #0077b6;">Nouveau message de contact</h2>
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
               <td style="padding: 8px 0; color: #666; width: 100px;">Nom</td>
