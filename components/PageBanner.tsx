@@ -9,8 +9,13 @@ type Props = {
 export default function PageBanner({ title, subtitle, image }: Props) {
   return (
     <section
-      className="relative pt-32 pb-20 px-6 overflow-hidden"
-      style={image ? undefined : { background: "linear-gradient(135deg, #dc2f02 0%, #f48c06 100%)" }}
+      className="relative pt-32 pb-24 px-6 overflow-hidden"
+      style={{
+        ...(image ? {} : { background: "linear-gradient(135deg, #dc2f02 0%, #f48c06 100%)" }),
+        borderRadius: "0 0 3rem 3rem",
+        zIndex: 10,
+        position: "relative",
+      }}
     >
       {image && (
         <>
@@ -27,11 +32,6 @@ export default function PageBanner({ title, subtitle, image }: Props) {
         <p className="text-lg max-w-xl" style={{ color: image ? "rgba(255,255,255,0.85)" : "#fff3e0" }}>{subtitle}</p>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
-          <path d="M0 48 C480 0 960 0 1440 48 L1440 48 L0 48 Z" fill="white" />
-        </svg>
-      </div>
     </section>
   );
 }

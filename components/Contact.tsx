@@ -43,7 +43,7 @@ export default function Contact() {
     "w-full px-4 py-3 rounded-xl border text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-1 transition-colors border-[#ffe0b2] focus:border-[#f48c06] focus:ring-[#f48c06]";
 
   return (
-    <section id="contact" className="py-24 px-6 relative overflow-hidden -mt-10">
+    <section id="contact" className="py-24 px-6 relative overflow-hidden" style={{ marginTop: "-3rem", paddingTop: "6rem" }}>
       <Image src="/contact.jpg" alt="" fill className="object-cover" />
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.55)" }} />
       <div className="max-w-2xl mx-auto relative z-10">

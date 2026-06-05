@@ -10,7 +10,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="processus" className="py-20 px-6 relative overflow-hidden -mt-10">
+    <section id="processus" className="py-20 px-6 relative overflow-hidden" style={{ marginTop: "-3rem", paddingTop: "6rem" }}>
       {/* Image de fond */}
       <Image src="/postit.jpg" alt="" fill className="object-cover" />
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundColor: "rgba(0,0,0,0.45)" }} />
