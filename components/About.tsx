@@ -16,7 +16,7 @@ export default function About() {
           {/* Photo de profil */}
           <div className="flex justify-center lg:justify-start">
             <div
-              className="w-80 h-80 rounded-full p-1.5 shadow-xl flex-shrink-0"
+              className="w-96 h-96 rounded-full p-1.5 shadow-xl flex-shrink-0"
               style={{ background: "linear-gradient(135deg, #dc2f02, #f48c06)" }}
             >
               <div className="relative w-full h-full rounded-full overflow-hidden">
