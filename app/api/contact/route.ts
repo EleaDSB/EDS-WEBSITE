@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     }
 
     const { error: sendError } = await resend.emails.send({
-      from: "EDS Web Solutions <onboarding@resend.dev>",
+      from: "EDS Web Solutions <contact@eds-web.dev>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `[EDS] ${subject}`,
@@ -131,7 +131,7 @@ export async function POST(request: Request) {
 
     // Email de confirmation au client
     await resend.emails.send({
-      from: "EDS Web Solutions <onboarding@resend.dev>",
+      from: "EDS Web Solutions <contact@eds-web.dev>",
       to: email,
       subject: "Votre message a bien été reçu — EDS Web Solutions",
       html: `
