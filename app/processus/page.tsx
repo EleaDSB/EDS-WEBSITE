@@ -3,8 +3,8 @@ import PageBanner from "@/components/PageBanner";
 import Process from "@/components/Process";
 
 export const metadata: Metadata = {
-  title: "Processus — EDS Web Solutions",
-  description: "Découvrez comment je travaille : de l'analyse des besoins à la mise en ligne et la maintenance.",
+  title: "Comment je travaille — Création site web étape par étape | EDS Web Solutions",
+  description: "Découvrez mon processus de création web : analyse, design, développement, mise en ligne et suivi. Un accompagnement transparent de A à Z pour votre projet web à Toulouse.",
 };
 
 export default function ProcessusPage() {

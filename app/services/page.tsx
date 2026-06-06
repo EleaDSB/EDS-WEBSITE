@@ -3,8 +3,8 @@ import PageBanner from "@/components/PageBanner";
 import Services from "@/components/Services";
 
 export const metadata: Metadata = {
-  title: "Services — EDS Web Solutions",
-  description: "Sites vitrine, e-commerce, mobile first, SEO, performance et maintenance — toutes mes prestations web.",
+  title: "Mes services web — Création site vitrine, e-commerce | EDS Web Solutions",
+  description: "Création de site vitrine, boutique e-commerce, optimisation SEO et maintenance web à Toulouse. Solutions sur-mesure pour artisans et indépendants. Devis gratuit.",
 };
 
 export default function ServicesPage() {
