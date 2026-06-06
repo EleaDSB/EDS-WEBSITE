@@ -47,7 +47,7 @@ export default function Process() {
                     </span>
                     <h3 className="text-base font-bold text-white">{step.title}</h3>
                   </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>{step.description}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.9)" }}>{step.description}</p>
                 </div>
               </div>
             ))}
