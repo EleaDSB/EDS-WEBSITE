@@ -37,8 +37,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Adresse email invalide." }, { status: 400 });
     }
 
-    await resend.emails.send({
-      from: "EDS Web Solutions <contact@eds-web.dev>",
+    const { error: sendError } = await resend.emails.send({
+      from: "EDS Web Solutions <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `[EDS] ${subject}`,
@@ -125,9 +125,13 @@ export async function POST(request: Request) {
       `,
     });
 
+    if (sendError) {
+      return NextResponse.json({ error: `Resend error: ${sendError.message}` }, { status: 500 });
+    }
+
     // Email de confirmation au client
     await resend.emails.send({
-      from: "EDS Web Solutions <contact@eds-web.dev>",
+      from: "EDS Web Solutions <onboarding@resend.dev>",
       to: email,
       subject: "Votre message a bien été reçu — EDS Web Solutions",
       html: `
