@@ -40,8 +40,8 @@ export default function Process() {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span
-                      className="text-xs font-bold px-2 py-0.5 rounded-full"
-                      style={{ backgroundColor: "rgba(244,140,6,0.25)", color: "#faa307" }}
+                      className="text-xs font-bold py-0.5 rounded-full text-center inline-block flex-shrink-0"
+                      style={{ backgroundColor: "rgba(244,140,6,0.25)", color: "#faa307", width: "72px" }}
                     >
                       Étape {step.number}
                     </span>
