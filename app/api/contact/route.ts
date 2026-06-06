@@ -1,7 +1,28 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
+// Rate limiting : max 5 requêtes par IP sur une fenêtre de 15 minutes
+const rateLimit = new Map<string, { count: number; ts: number }>();
+const WINDOW_MS = 15 * 60 * 1000;
+const MAX_REQUESTS = 5;
+
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0] ?? "unknown";
+  const now = Date.now();
+  const entry = rateLimit.get(ip);
+
+  if (entry && now - entry.ts < WINDOW_MS) {
+    if (entry.count >= MAX_REQUESTS) {
+      return NextResponse.json(
+        { error: "Trop de tentatives. Réessayez dans 15 minutes." },
+        { status: 429 }
+      );
+    }
+    entry.count++;
+  } else {
+    rateLimit.set(ip, { count: 1, ts: now });
+  }
+
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
