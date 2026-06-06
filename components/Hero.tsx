@@ -18,7 +18,7 @@ export default function Hero() {
         </div>
 
         {/* Titre magazine */}
-        <h1 className="font-black leading-[0.95] tracking-tight text-white mb-8" style={{ fontSize: "clamp(3.5rem, 10vw, 8rem)" }}>
+        <h1 className="font-black leading-[0.95] tracking-tight text-white mb-8" style={{ fontSize: "clamp(2.2rem, 8vw, 8rem)" }}>
           Je crée des sites<br />
           qui font la{" "}
           <span
