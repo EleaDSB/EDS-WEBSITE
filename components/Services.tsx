@@ -19,11 +19,11 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col"
               style={{ border: "1.5px solid rgba(255,255,255,0.15)" }}
             >
               <div className={`h-2 w-full bg-gradient-to-r ${s.gradient}`} />
-              <div className="p-8" style={{ backgroundColor: "rgba(255,255,255,0.08)", backdropFilter: "blur(8px)" }}>
+              <div className="p-8 flex-1" style={{ backgroundColor: "rgba(255,255,255,0.08)", backdropFilter: "blur(8px)" }}>
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5 shadow-sm"
                   style={{ backgroundColor: "rgba(244,140,6,0.25)" }}
