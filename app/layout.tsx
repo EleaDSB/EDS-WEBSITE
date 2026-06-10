@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     description: "Création de sites vitrine, e-commerce et applications web pour indépendants et artisans. Devis gratuit sous 24h.",
     images: ["/heroimage.jpg"],
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
